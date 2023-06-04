@@ -7,7 +7,7 @@ The component is designed to allow a system that needs to allow access to variou
 
 **Changelog**
 
-Version 0.01: The creation of the starting variant.
+Version 0.1: The creation of the starting variant.
 
 **Details**
 
