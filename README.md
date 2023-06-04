@@ -16,12 +16,19 @@ The PasswordHasher static class is used for hashing and checking passwords so th
 The FileEncryptor class has file encryption and decryption functions used to encrypt and temporarily decrypt a file if the local storage method is used. It needs both source and destination file locations, as well as a provider of the AesCryptoServiceProvider class. The one created on initialization in the main class is not publically accessible.
 
 LoginManager is the base class that contains all public functions. There are 3 possible initializers for each data storage method:
+
 • SQL storage requires ConnectionString (database connection data), Users table name, column names of Username, Password, ID and Role,
+
 • Local method requires file location, key and IV for AES (Advanced Encryption Standard) encryption,
+
 • Although I don't know what the component would be used for if the main functions are not useful, the Custom method allows the function to assign its own functions as function variables. Just add the function after the other variables.
-Below are 3 features:
+
+There are also 3 functions:
+
 • Login(string username, string password) – Tries to login according to the given data, returns null if login failed or LoginVm class with data if successful.
+
 • Register(string username, string password, string role) – Checks if there is already a user with the entered username and if not found, creates one. Returns a bool value based on success status.
+
 • ChangePassword(string username, string password, string oldPassword) – Checks whether the old password matches, and if it matches, changes it to a new one. Returns a bool value based on success status.
 
 LoginVm class has only 3 variables: UserName, UserId and UserRole.
