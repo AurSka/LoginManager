@@ -1,0 +1,10 @@
+C:\Component\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.1\ClassLibrary1.deps.json
+C:\Component\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.1\ClassLibrary1.dll
+C:\Component\ClassLibrary1\ClassLibrary1\bin\Debug\netstandard2.1\ClassLibrary1.pdb
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.csproj.AssemblyReference.cache
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.AssemblyInfoInputs.cache
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.AssemblyInfo.cs
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.csproj.CoreCompileInputs.cache
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.dll
+C:\Component\ClassLibrary1\ClassLibrary1\obj\Debug\netstandard2.1\ClassLibrary1.pdb

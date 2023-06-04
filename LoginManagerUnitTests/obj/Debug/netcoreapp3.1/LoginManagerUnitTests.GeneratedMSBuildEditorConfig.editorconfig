@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = LoginManagerUnitTests
+build_property.ProjectDir = C:\Component\ClassLibrary1\LoginManagerUnitTests\
