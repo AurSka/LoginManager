@@ -307,7 +307,7 @@ namespace LoginManager
                         if(!File.Exists(FileLocation) || string.IsNullOrWhiteSpace(FileLocation)) //If there is no file, there are no users.
                             throw new Exception("User file not found.");
                         FileEncryptor.DecryptFile(FileLocation, FileLocation + "temp", Provider);
-
+                        encrypted = false;
                         string line = "";
                         string[] arrLine = File.ReadAllLines(FileLocation + "temp"); int t = -1;
                         while (!line.StartsWith(username.Replace(";", "{semicolon}") + ";") && ++t < arrLine.Length)
@@ -322,6 +322,7 @@ namespace LoginManager
                             arrLine[t] = string.Format("{0};{1};{2};{3}", vars[0], vars[1], vars[2], PasswordHasher.Hash(password));
                             File.WriteAllLines(FileLocation + "temp", arrLine);
                             FileEncryptor.EncryptFile(FileLocation + "temp", FileLocation, Provider);
+                            encrypted = true;
                             File.Delete(FileLocation + "temp");
                             return true;
                         }
