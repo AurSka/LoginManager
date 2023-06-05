@@ -26,7 +26,7 @@ namespace LoginManager
         /// <param name="connectionString">Connection string, if storage type is SQL.</param>
         /// <param name="table">The table housing the users.</param>
         /// <param name="userNameColumn">Column that holds the usernames. Default value is "UserName".</param>
-        /// <param name="passwordColumn">Column that holds the passwords, which should be encrypted. Never leave your sensitive data unencrypted if you can help it. Default value is "Password".</param>
+        /// <param name="passwordColumn">Column that holds the passwords, which should be hashed. Never leave your sensitive data unencrypted in some way if you can help it. Default value is "Password".</param>
         /// <param name="emailColumn">Column that holds emails. Default value is "Email".</param>
         /// <param name="idColumn">Column that holds user IDs, if you want ID to be returned. Optional.</param>
         /// <param name="roleColumn">Column that holds user roles, if you want roles to be returned. Optional.</param>
