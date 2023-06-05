@@ -20,7 +20,7 @@ namespace LoginManagerUnitTests
         public static string RoleColumn = "Role";
 
         /// <summary>
-        /// Tests 
+        /// Tests functionality on SQL saving method.
         /// </summary>
         [Fact]
         public void SqlTest()
@@ -30,9 +30,11 @@ namespace LoginManagerUnitTests
             string username = "test";
             string password = "111";
             string role = "User";
+            string newPassword = "112";
 
             var login = manager.AttemptLogin(username, password);
             Assert.Null(login);
+            Assert.False(manager.ChangePassword(username, newPassword, password));
 
             Assert.True(manager.Register(username, password, role));
             Assert.False(manager.Register(username, password, role));
@@ -40,8 +42,9 @@ namespace LoginManagerUnitTests
             login = manager.AttemptLogin(username, password);
             Assert.Equal(username, login.UserName);
             Assert.Equal(role, login.UserRole);
+            login = manager.AttemptLogin(username, newPassword);
+            Assert.Null(login);
 
-            string newPassword = "112";
 
             Assert.True(manager.ChangePassword(username, newPassword, password));
             Assert.False(manager.ChangePassword(username, newPassword, password));
@@ -57,7 +60,7 @@ namespace LoginManagerUnitTests
             login = manager.AttemptLogin(username, password);
             Assert.Null(login);
             Assert.False(manager.Register(username, password, role));
-            Assert.False(manager.ChangePassword(username, newPassword, password));
+            Assert.False(manager.ChangePassword(username, newPassword, password));    
         }
         /// <summary>
         /// Tests functionality on local saving method.
@@ -84,6 +87,8 @@ namespace LoginManagerUnitTests
             login = manager.AttemptLogin(username, password);
             Assert.Equal(username, login.UserName);
             Assert.Equal(role, login.UserRole);
+            login = manager.AttemptLogin(username, newPassword);
+            Assert.Null(login);
 
 
             Assert.True(manager.ChangePassword(username, newPassword, password));
